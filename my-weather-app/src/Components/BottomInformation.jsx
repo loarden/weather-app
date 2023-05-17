@@ -6,7 +6,7 @@ function BottomInformation(props) {
 
   return (
     <div className="flex items-center justify-between sm:justify-around">
-      <h1 className="text-6xl font-bold drop-shadow-sm">{temp_c}°c</h1>
+      <h1 className="text-6xl sm:text-7xl font-bold drop-shadow-sm">{temp_c}°c</h1>
       <div>
         <Detail 
           detailsName="Feels like"
