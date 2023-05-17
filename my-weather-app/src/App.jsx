@@ -4,9 +4,9 @@ import Input from './Components/Input';
 
 function App() {
   return (
-    <div className="App flex items-center flex-col">
+    <div className="flex flex-col items-center">
       <Input />
-      <Card />
+      <Card city='Budapest'/>
     </div>
   );
 }
