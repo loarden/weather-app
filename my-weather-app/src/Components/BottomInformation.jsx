@@ -10,7 +10,7 @@ function BottomInformation(props) {
       <div>
         <Detail 
           detailsName="Feels like"
-          detail={details ? details.feelslike_c : null}
+          detail={details ? details.feelslike_c + '°c' : null}
         />
         <Detail 
           detailsName="Wind"
