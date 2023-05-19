@@ -35,10 +35,10 @@ function Card (props) {
 
   return (
     <div className="max-w-xl w-full px-4 sm:px-0">
-      <h2 className="text-white text-center font-bold text-lg">Current Weather</h2>
+      <h2 className="text-white text-left font-bold text-lg my-2">Current Weather</h2>
       <CurrentWeather current={currentWeather !== 0 && currentWeather}/>
-      <h2 className="text-white text-center font-bold text-lg">12 Hour Forecast</h2>
-      {hourlyWeathers ? hourlyWeathers.list.slice(0,5).map((weather) => {
+      <h2 className="text-white text-left font-bold text-lg my-2">12 Hour Forecast</h2>
+      {hourlyWeathers ? hourlyWeathers.list.slice(0,9).map((weather) => {
         return (
           <Forecast 
             key={weather.dt}

@@ -1,4 +1,9 @@
 function Input(props) {
+  const onSelect = props.onSelect
+
+  function handleChange(event) {
+    
+  }
   
   return (
     <form className="w-full max-w-xl m-2 px-4 sm:p-0">   
