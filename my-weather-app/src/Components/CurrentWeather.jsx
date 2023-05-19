@@ -7,12 +7,12 @@ function CurrentWeather (props) {
   return (
     <div className="flex flex-col gap-4 mt-4 w-full text-white p-4 sm:p-6 backdrop-blur-sm shadow">
       <TopInformation 
-        cityName={current ? current.location.name : null}
-        icon={current ? current.current.condition.icon : null}
+        cityName={current ? current.name : null}
+        icon={current ? current.weather[0].icon : null}
       />
       <BottomInformation 
-        temp_c={current ? current.current.temp_c : null}
-        details={current ? current.current : null}
+        temp_c={current ? current.main.temp : null}
+        details={current ? current : null}
       />
     </div>
   )
