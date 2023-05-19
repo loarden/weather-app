@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body,html {
   background-image: url('../public/wp10623707-vector-mountain-wallpapers.jpg');
   height: 100%;

@@ -11,19 +11,19 @@ function BottomInformation(props) {
         {temp_c}
       </h1>
       <div>
-        <Detail 
+        <Detail
           detailsName="Feels like"
           detail={details ? kelvinToCelsius(details.main.feels_like) : null}
         />
-        <Detail 
+        <Detail
           detailsName="Wind"
           detail={details ? speedUnitExchange(details.wind.speed, 1) : null}
         />
-        <Detail 
+        <Detail
           detailsName="Pressure"
           detail={details ? details.main.pressure : null}
         />
-        <Detail 
+        <Detail
           detailsName="Humidity"
           detail={details ? details.main.humidity : null}
         />
