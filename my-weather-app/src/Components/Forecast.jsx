@@ -1,29 +1,18 @@
-import { useEffect } from "react";
 import { kelvinToCelsius } from "../Controllers/unitExchange";
 
 function Forecast(props){
-  const weatherList = props.weatherList
-
-  useEffect(() => {
-    console.log(weatherList)
-  },[])
-
-  /* const icon = `http://openweathermap.org/img/w/${props.icon}.png`
+  const time = props.time
   const temp = props.temp
-  const time = props.time */
+  const icon = props.icon
 
   return (
-    <>
-      {weatherList && weatherList.map((weather) => {
-        return (
-        <>
-         <h4>{kelvinToCelsius(weather.main.temp)}</h4>
-         <h4>{weather.dt_txt}</h4>
-         <img src={`http://openweathermap.org/img/w/${weather.weather.icon}.png`} alt="icon" />
-        </>
-        )
-      })}
-    </>
+    <div className="text-white flex justify-between items-center px-2 my-2 backdrop-blur-sm shadow">
+      <p>{time}</p>
+      <div className="flex items-center">
+        <h4 className="text-lg font-bold">{kelvinToCelsius(temp)}</h4>
+        <img src={`http://openweathermap.org/img/w/${icon}.png`} atl={icon}/>
+      </div>
+    </div>
   )
 }
 

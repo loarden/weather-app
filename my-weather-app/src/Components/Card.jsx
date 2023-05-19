@@ -35,8 +35,19 @@ function Card (props) {
 
   return (
     <div className="max-w-xl w-full px-4 sm:px-0">
+      <h2 className="text-white text-center font-bold text-lg">Current Weather</h2>
       <CurrentWeather current={currentWeather !== 0 && currentWeather}/>
-      <Forecast weatherList={hourlyWeathers !== 0 && hourlyWeathers.list}/>
+      <h2 className="text-white text-center font-bold text-lg">12 Hour Forecast</h2>
+      {hourlyWeathers ? hourlyWeathers.list.slice(0,5).map((weather) => {
+        return (
+          <Forecast 
+            key={weather.dt}
+            icon={weather.weather[0].icon}
+            temp={weather.main.temp}
+            time={weather.dt_txt}
+          />
+        )
+      }): null}
     </div>
   )
 }

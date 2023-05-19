@@ -5,8 +5,8 @@ import Input from './Components/Input';
 
 function App() {
   const [result, setResult] = useState({
-    lat: 47.5, 
-    lon: 19.08
+    lat: 51.52, 
+    lon: -0.11
   })
 
   return (
