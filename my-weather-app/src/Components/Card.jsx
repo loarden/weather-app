@@ -2,17 +2,25 @@ import { useEffect, useState } from "react";
 import CurrentWeather from "./CurrentWeather";
 import Forecast from "./Forecast";
 import Loading from "./Loading";
+import NotFound from "./NotFound";
 
 function Card(props) {
   const city = props.city;
   const [currentWeather, setCurrentWeather] = useState('')
   const [hourlyWeathers, setHourlyWeathers] = useState('')
+  const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    setError(false)
     setLoading(true)
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c270a9f6556304b2106962127d7abdc2`)
-      .then(response => response.json())
+      .then(response => {
+        if(response.status === 200) {
+          return response.json()
+        }
+        setError(true)
+      })
       .then(data => {
         setCurrentWeather(data)
         setLoading(false)
@@ -20,12 +28,35 @@ function Card(props) {
   }, [city])
 
   useEffect(() => {
+    setError(false)
+    setLoading(true)
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=dc1f2803991d7dbb9328390a5400c22d`)
-      .then(response => response.json())
+      .then(response => {
+        if(response.status === 200) {
+          return response.json()
+        }
+        setError(true)
+      })
       .then(data => {
         setHourlyWeathers(data)
       })
   }, [city])
+
+  useEffect(() => {
+    console.log(hourlyWeathers)
+  }, [hourlyWeathers])
+
+  useEffect(() => {
+    console.log(currentWeather)
+  }, [currentWeather])
+
+  if(error) {
+    return (
+      <>
+        <NotFound />
+      </>
+    )
+  }
 
   return (
     <>

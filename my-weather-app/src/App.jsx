@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     console.log(result)
-  }, [result])
+  },[result])
 
   return (
     <div className="flex flex-col items-center">
