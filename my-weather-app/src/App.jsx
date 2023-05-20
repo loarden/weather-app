@@ -4,7 +4,7 @@ import Card from './Components/Card';
 import Input from './Components/Input';
 
 function App() {
-  const [result, setResult] = useState('')
+  const [result, setResult] = useState('Budapest')
 
   function handleSelect(selected) {
     setResult(selected)
