@@ -64,29 +64,4 @@ Upon opening the Weather App, you will be presented with the current weather inf
 
 To search for weather information for a specific location, enter the location in the search bar and press Enter or click the search button.
 
-The app will display the current weather information and a 5-day weather forecast for the searched location.
-
-You can switch between Celsius and Fahrenheit temperature units by clicking on the unit selection button.
-
-## Contributing
-Contributions to the Weather App are welcome! If you would like to report a bug, request a new feature, or contribute code changes, please follow the guidelines below.
-
-### Bug Reports
-To report a bug or any issues you encounter, please follow these steps:
-
-Check the existing issues on the GitHub repository to ensure the bug hasn't already been reported.
-If the bug hasn't been reported, create a new issue with a descriptive title and a detailed description of the problem, including steps to reproduce it.
-### Feature Requests
-If you have a suggestion for a new feature or an enhancement, please follow these steps:
-
-Check the existing issues and pull requests on the GitHub repository to ensure the feature hasn't already been suggested or implemented.
-If the feature hasn't been suggested, create a new issue with a clear title and a detailed description of the proposed feature.
-### Pull Requests
-To contribute code changes to the Weather App, please follow these steps:
-
-Fork the repository and create a new branch for your changes.
-Make your code changes, following the project's coding conventions and guidelines.
-Write tests to ensure your changes are functioning as intended.
-Open a pull request on the GitHub repository, providing a clear title and a detailed description of your changes.
-License
-The Weather App is open-source software released under the MIT License. You can find the license file in the project repository.
+The app will display the current weather information and a 12-hours weather forecast for the searched location.
