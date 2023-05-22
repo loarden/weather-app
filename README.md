@@ -16,7 +16,7 @@ Pull Requests
 License
 ## Features
 Current weather information, including temperature, humidity, wind speed, and weather condition.
-5-day weather forecast, with daily temperature highs and lows.
+12-hours weather forecast, with daily temperature highs and lows.
 Search functionality to find weather information for a specific location.
 Geolocation feature to automatically detect and display weather for the user's current location.
 Responsive design for optimal user experience on different devices.
