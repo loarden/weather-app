@@ -5,6 +5,7 @@ import Input from './Components/Input';
 
 function App() {
   const [result, setResult] = useState('Budapest')
+  const API_KEY = process.env.REACT_APP_API_KEY;
 
   function handleSelect(selected) {
     setResult(selected)
@@ -16,7 +17,10 @@ function App() {
         onSelect={handleSelect}
       />
       {result.length !== 0 ?
-        <Card city={result} />
+        <Card
+          apiKey = {API_KEY}
+          city={result} 
+          />
         : null}
     </div>
   );

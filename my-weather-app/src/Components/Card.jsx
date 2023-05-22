@@ -5,7 +5,8 @@ import Loading from "./Loading";
 import NotFound from "./NotFound";
 
 function Card(props) {
-  const city = props.city;
+  const city = props.city
+  const apiKey = props.apiKey
   const [currentWeather, setCurrentWeather] = useState('')
   const [hourlyWeathers, setHourlyWeathers] = useState('')
   const [error, setError] = useState(false)
@@ -14,7 +15,7 @@ function Card(props) {
   useEffect(() => {
     setError(false)
     setLoading(true)
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c270a9f6556304b2106962127d7abdc2`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
       .then(response => {
         if (response.status === 200) {
           return response.json()
@@ -26,7 +27,7 @@ function Card(props) {
         setLoading(false)
       })
 
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=dc1f2803991d7dbb9328390a5400c22d`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`)
       .then(response => {
         if (response.status === 200) {
           return response.json()
