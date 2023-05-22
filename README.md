@@ -11,8 +11,8 @@ The Weather App is a web application that allows users to get weather informatio
 3. Usage
 4. Contributing
 ## Features
-- Current weather information, including temperature, humidity, wind speed, and weather condition.
-- 24-hours weather forecast, with daily temperature highs and lows.
+- Current weather information, including temperature, humidity, wind speed, and pressure.
+- 24-hours weather forecast.
 - Search functionality to find weather information for a specific location.
 - Responsive design for optimal user experience on different devices.
 ## Installation
