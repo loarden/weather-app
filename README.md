@@ -6,8 +6,8 @@ The Weather App is a web application that allows users to get weather informatio
 ## Table of Contents
 1. Features
 2. Installation
-  - Prerequisites
-  - Setup
+   - Prerequisites
+    - Setup
 3. Usage
 4. Contributing
 ## Features
