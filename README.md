@@ -65,3 +65,6 @@ Upon opening the Weather App, you will be presented with the current weather inf
 To search for weather information for a specific location, enter the location in the search bar and press Enter or click the search button.
 
 The app will display the current weather information and a 12-hours weather forecast for the searched location.
+
+## License
+The Weather App is open-source software released under the MIT License. You can find the license file in the project repository.
