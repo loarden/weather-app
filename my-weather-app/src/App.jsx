@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Card from './Components/Card';
 import Input from './Components/Input';
@@ -9,10 +9,6 @@ function App() {
   function handleSelect(selected) {
     setResult(selected)
   }
-
-  useEffect(() => {
-    console.log(result)
-  },[result])
 
   return (
     <div className="flex flex-col items-center">

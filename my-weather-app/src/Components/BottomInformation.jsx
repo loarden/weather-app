@@ -1,4 +1,4 @@
-import { kelvinToCelsius, speedUnitExchange } from "../Controllers/unitExchange";
+import { kelvinToCelsius, speedUnitExchange } from "../Modules/unitExchange";
 import Detail from "./Details";
 
 function BottomInformation(props) {

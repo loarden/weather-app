@@ -1,4 +1,4 @@
-import { kelvinToCelsius } from "../Controllers/unitExchange";
+import { kelvinToCelsius } from "../Modules/unitExchange";
 
 function Forecast(props) {
   const time = props.time

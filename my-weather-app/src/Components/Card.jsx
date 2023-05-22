@@ -16,7 +16,7 @@ function Card(props) {
     setLoading(true)
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c270a9f6556304b2106962127d7abdc2`)
       .then(response => {
-        if(response.status === 200) {
+        if (response.status === 200) {
           return response.json()
         }
         setError(true)
@@ -25,14 +25,10 @@ function Card(props) {
         setCurrentWeather(data)
         setLoading(false)
       })
-  }, [city])
 
-  useEffect(() => {
-    setError(false)
-    setLoading(true)
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=dc1f2803991d7dbb9328390a5400c22d`)
       .then(response => {
-        if(response.status === 200) {
+        if (response.status === 200) {
           return response.json()
         }
         setError(true)
@@ -42,15 +38,7 @@ function Card(props) {
       })
   }, [city])
 
-  useEffect(() => {
-    console.log(hourlyWeathers)
-  }, [hourlyWeathers])
-
-  useEffect(() => {
-    console.log(currentWeather)
-  }, [currentWeather])
-
-  if(error) {
+  if (error) {
     return (
       <>
         <NotFound />
