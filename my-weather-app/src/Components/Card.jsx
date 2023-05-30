@@ -4,9 +4,7 @@ import Forecast from "./Forecast";
 import Loading from "./Loading";
 import NotFound from "./NotFound";
 
-function Card(props) {
-  const city = props.city
-  const apiKey = props.apiKey
+function Card({city, apiKey}) {
   const [currentWeather, setCurrentWeather] = useState('')
   const [hourlyWeathers, setHourlyWeathers] = useState('')
   const [error, setError] = useState(false)

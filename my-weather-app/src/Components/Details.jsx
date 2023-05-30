@@ -1,7 +1,4 @@
-function Detail(props) {
-  const detailsName = props.detailsName;
-  const detail = props.detail;
-
+function Detail({detailsName, detail}) {
   return (
     <div className="flex justify-between text-md sm:text-xl gap-5">
       <span className="drop-shadow-sm">{detailsName}</span>
